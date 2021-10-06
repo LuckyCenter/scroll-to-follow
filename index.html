@@ -1,0 +1,138 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var $sidebar = $(".onlinebox"),
+                $window = $(window),
+                offset = $sidebar.offset(),
+                topPadding = 150;
+            $window.scroll(function () {
+                if ($window.scrollTop() > offset.top) {
+                    $sidebar.stop().animate({
+                        marginTop: $window.scrollTop() - offset.top + topPadding,
+                    });
+                } else {
+                    $sidebar.stop().animate({
+                        marginTop: 0,
+                    });
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div style="width: 300px; float: left; height: 2500px; background: #930"></div>
+    <div class="onlinebox"
+        style="top: 10%;right:5%;position:absolute;background-color: #fff;box-shadow: 0 5px 9px rgb(4 0 0 / 17%);z-index: 999;">
+        <div class="onlinebox-top">
+            <div class="onlinebox-top-btn">
+                <a href="" class="onlinebox-min">-</a>
+                <a href="" class="onlinebox-close">x</a>
+            </div>
+            <h4>在线交流</h4>
+        </div>
+        <div class="onlinebox-center list-group">
+            <li class="list-group-item">
+                <p class="list-group-item-text">
+                    <a href=""><i class="icon iconfont icon-QQ"
+                            style="color:#62a8ea;font-size:20px;"></i><span>kinson</span></a>
+                </p>
+            </li>
+            <li class="list-group-item">
+                <p class="list-group-item-text">
+                    <a href=""><i class="icon iconfont icon-QQ"
+                            style="color:#62a8ea;font-size:20px;"></i><span>jason</span></a>
+                </p>
+            </li>
+            <li class="list-group-item">
+                <p class="list-group-item-text">
+                    <a href=""><i class="icon iconfont icon-QQ"
+                            style="color:#62a8ea;font-size:20px;"></i><span>lisa</span></a>
+                </p>
+            </li>
+            <li class="list-group-item">
+                <p class="list-group-item-text">
+                    <a href=""><i class="icon iconfont icon-QQ"
+                            style="color:#62a8ea;font-size:20px;"></i><span>mackey</span></a>
+                </p>
+            </li>
+        </div>
+        <div class="onlinebox-bottom">
+            <p>欢迎咨询</p>
+        </div>
+    </div>
+    <style>
+        .onlinebox {
+            width: 160px;
+        }
+
+        .onlinebox-top {
+            padding: 5px 5px 5px 10px;
+            background: #444;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .onlinebox-center {
+            padding: 5px 0;
+            margin-bottom: 0;
+        }
+
+        .list-group {
+            margin-bottom: 20px;
+            list-style: none;
+            box-sizing: border-box;
+            line-height: 25px;
+            font-size: 17px;
+        }
+
+        .onlinebox-bottom {
+            border-top: 1px solid #eee;
+            padding: .3rem 1.25rem;
+        }
+
+        .onlinebox-top-btn {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+
+        .onlinebox-close {
+            position: relative;
+            top: -2px;
+            color: #fff;
+        }
+
+        .onlinebox-min {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+        .list-group-item {
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .list-group-item:hover {
+            background: #f8f8f8;
+        }
+
+        .list-group-item-text {
+            padding-left: 12px;
+        }
+
+        .list-group-item:first-child {
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+        }
+    </style>
+</body>
+
+</html>
