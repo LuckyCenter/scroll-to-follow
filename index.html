@@ -6,6 +6,63 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2848850_22alt74x165.css">
+</head>
+
+<body>
+    <div style="width: 300px; float: left; height: 2500px; background: #930"></div>
+    <div class="onlinebox" style="top: 120px;right:10px;position:absolute;background-color: #fff;box-shadow: 0 5px 9px rgb(4 0 0 / 17%);z-index: 999;">
+
+        <div class="onlinebox-open" id="onlinebox-open" style="display: none;">
+            <i class="icon iconfont icon-QQ" style="color: #fff;"></i>
+        </div>
+        <div class="onlinebox-box">
+            <div class="onlinebox-top">
+                <div class="onlinebox-top-btn">
+                    <span class="onlinebox-min" style="cursor:pointer;">-</span>
+                    <span class="onlinebox-close" style="cursor:pointer;">x</span>
+                </div>
+                <h4 class="onlinebox-top-label">在线交流</h4>
+            </div>
+            <div class="onlinebox-center list-group">
+                <li class="list-group-item">
+                    <p class="list-group-item-text">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=948816115&site=qq&menu=yes">
+                            <i class="icon iconfont icon-QQ qqicon"></i>
+                            <span>kinson</span>
+                        </a>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p class="list-group-item-text">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=948816115&site=qq&menu=yes">
+                            <i class="icon iconfont icon-QQ qqicon"></i>
+                            <span>jason</span>
+                        </a>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p class="list-group-item-text">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=948816115&site=qq&menu=yes">
+                            <i class="icon iconfont icon-QQ qqicon"></i>
+                            <span>lisa</span>
+                        </a>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p class="list-group-item-text">
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=948816115&site=qq&menu=yes">
+                            <i class="icon iconfont icon-QQ qqicon"></i>
+                            <span>mackey</span>
+                        </a>
+                    </p>
+                </li>
+            </div>
+            <div class="onlinebox-bottom">
+                <p>欢迎咨询</p>
+            </div>
+        </div>
+    </div>
     <script>
         $(function () {
             var $sidebar = $(".onlinebox"),
@@ -23,73 +80,48 @@
                     });
                 }
             });
+            $('#onlinebox-open').click(function(){
+                $(this).css({'display':'none'})
+                $('.onlinebox-box').css({'display':'block'})
+            })
+            $('.onlinebox-min').click(function(){
+                $('.onlinebox-box').css({'display':'none'})
+                $('#onlinebox-open').css({'display':'inline-block'})
+            })
+            $('.onlinebox-close').click(function(){
+                $('.onlinebox-box').css({'display':'none'})
+                $('#onlinebox-open').css({'display':'inline-block'})
+            })
         })
     </script>
-</head>
-
-<body>
-    <div style="width: 300px; float: left; height: 2500px; background: #930"></div>
-    <div class="onlinebox"
-        style="top: 10%;right:5%;position:absolute;background-color: #fff;box-shadow: 0 5px 9px rgb(4 0 0 / 17%);z-index: 999;">
-        <div class="onlinebox-top">
-            <div class="onlinebox-top-btn">
-                <a href="" class="onlinebox-min">-</a>
-                <a href="" class="onlinebox-close">x</a>
-            </div>
-            <h4>在线交流</h4>
-        </div>
-        <div class="onlinebox-center list-group">
-            <li class="list-group-item">
-                <p class="list-group-item-text">
-                    <a href=""><i class="icon iconfont icon-QQ"
-                            style="color:#62a8ea;font-size:20px;"></i><span>kinson</span></a>
-                </p>
-            </li>
-            <li class="list-group-item">
-                <p class="list-group-item-text">
-                    <a href=""><i class="icon iconfont icon-QQ"
-                            style="color:#62a8ea;font-size:20px;"></i><span>jason</span></a>
-                </p>
-            </li>
-            <li class="list-group-item">
-                <p class="list-group-item-text">
-                    <a href=""><i class="icon iconfont icon-QQ"
-                            style="color:#62a8ea;font-size:20px;"></i><span>lisa</span></a>
-                </p>
-            </li>
-            <li class="list-group-item">
-                <p class="list-group-item-text">
-                    <a href=""><i class="icon iconfont icon-QQ"
-                            style="color:#62a8ea;font-size:20px;"></i><span>mackey</span></a>
-                </p>
-            </li>
-        </div>
-        <div class="onlinebox-bottom">
-            <p>欢迎咨询</p>
-        </div>
-    </div>
     <style>
-        .onlinebox {
-            width: 160px;
+        .onlinebox-box{
+            width:160px;
         }
-
-        .onlinebox-top {
+        .onlinebox-open{
+            display: block;
+            cursor: pointer;
+            padding: 0 10px;
+            background: #444;
+            font-size: 18px;
+            line-height: 40px;
+            color: #fff;
+        }
+        .onlinebox-top{
             padding: 5px 5px 5px 10px;
             background: #444;
             font-size: 18px;
             color: #fff;
         }
-
         .onlinebox-center {
             padding: 5px 0;
             margin-bottom: 0;
         }
 
         .list-group {
-            margin-bottom: 20px;
             list-style: none;
             box-sizing: border-box;
-            line-height: 25px;
+            line-height: 8px;
             font-size: 17px;
         }
 
@@ -98,10 +130,18 @@
             padding: .3rem 1.25rem;
         }
 
+        .onlinebox-bottom p {
+            margin: 0;
+        }
+
         .onlinebox-top-btn {
             position: absolute;
             top: 0;
             right: 10px;
+        }
+
+        .onlinebox-top-label {
+            margin: 0;
         }
 
         .onlinebox-close {
@@ -128,9 +168,18 @@
             padding-left: 12px;
         }
 
+        .list-group-item-text a {
+            text-decoration: none;
+        }
+
         .list-group-item:first-child {
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
+        }
+
+        .qqicon {
+            color: #62a8ea;
+            font-size: 20px;
         }
     </style>
 </body>
